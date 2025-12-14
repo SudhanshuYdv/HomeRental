@@ -1,0 +1,42 @@
+<% layout("layouts/boilerplate") %> 
+<div class="row">
+    <div class="col-8 offset-2">
+        <br>
+    <h1>Create a new listings..</h1>
+    <br>
+   <form action="/listings" method="POST"  class="needs-validation" enctype="multipart/form-data" novalidate> <!-- novalidate is used to remove or disabled the default browser validation-->
+        <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" name="listing[title]" placeholder="enter title" class="form-control" required>
+        </div>
+        <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea type="text" name="listing[description]" placeholder="enter description" class="form-control" required></textarea>
+        </div>
+        <!-- <div class="mb-3">
+        <label for="image" class="form-label">Image URL</label>
+        <input type="text" name="listing[image]" placeholder="enter image url"class="form-control">
+        </div> -->
+        <div class="mb-3">
+        <label for="image" class="form-label">Image</label>
+        <input type="file" name="listing[image]" class="form-control" required>
+        </div>
+        <div class="mb-3">
+        <label for="price" class="form-label">Price</label>
+        <input type="text" name="listing[price]" placeholder="enter price" class="form-control" required>
+        </div>
+        <div class="mb-3">
+        <label for="location" class="form-label">Location</label>
+        <input type="text" name="listing[location]" placeholder="enter location" class="form-control" required>
+        </div>
+        <div class="mb-3">
+        <label for="country" class="form-label">Country</label>
+        <input type="text" name="listing[country]" placeholder="enter country" class="form-control" required>
+        </div>
+    
+        <button class="btn btn-dark mt-3 ">Add</button>
+       
+    </form>
+    
+</div>
+</div>

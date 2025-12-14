@@ -1,0 +1,22 @@
+<% 
+  const successMsgs = (typeof success !== 'undefined' && success) ? success : [];
+  const errorMsgs = (typeof error !== 'undefined' && error) ? error : [];
+%>
+
+<% if (successMsgs.length) { %>
+  <% successMsgs.forEach(msg => { %>
+    <div class="alert alert-success alert-dismissible fade show col-6 offset-3" role="alert">
+      <%= msg %>
+      <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+  <% }) %>
+<% } %>
+
+<% if (errorMsgs.length) { %>
+  <% errorMsgs.forEach(msg => { %>
+    <div class="alert alert-danger alert-dismissible fade show col-6 offset-3" role="alert">
+      <%= msg %>
+      <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+  <% }) %>
+<% } %>
